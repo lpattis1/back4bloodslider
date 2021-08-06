@@ -1,0 +1,55 @@
+.title {
+  margin-top: 4rem;
+  margin-bottom: 3rem !important;
+  text-transform: uppercase;
+  color: #a70d10;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 992px) {
+  .thumbnail-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.active-thumbnail {
+  position: relative;
+  -webkit-filter: brightness(81%) saturate(113%);
+  filter: brightness(81%) saturate(113%);
+}
+.active-thumbnail::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  background: #a70d1096;
+}
+
+.about-col.fade-in {
+  -webkit-animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
